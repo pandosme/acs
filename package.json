@@ -1,7 +1,8 @@
 {
     "name": "acs",
-    "description": "ACS deployment tool",
+    "description": "ACS Camera deployment tool",
     "version": "1.0.0",
+    "author": "Fred Juhlin <fredj@axis.com>",
     "dependencies": {
         "node-red-dashboard": "3.2.0",
         "node-red-node-ui-table": "0.4.3",
