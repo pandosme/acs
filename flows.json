@@ -712,7 +712,7 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "label": "Reset",
         "tooltip": "",
         "color": "",
@@ -867,6 +867,35 @@
         "wires": [
             [
                 "44f1e3d7e67fa27e"
+            ]
+        ]
+    },
+    {
+        "id": "a20d7e734a569240",
+        "type": "inject",
+        "z": "605a8de4fdf4f15e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "6270c4012361d127"
             ]
         ]
     },
