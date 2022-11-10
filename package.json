@@ -1,8 +1,12 @@
 {
     "name": "acs",
-    "description": "A Node-RED Project",
-    "version": "0.0.1",
-    "dependencies": {},
+    "description": "ACS deployment tool",
+    "version": "1.0.0",
+    "dependencies": {
+        "node-red-dashboard": "3.2.0",
+        "node-red-node-ui-table": "0.4.3",
+        "node-red-contrib-axis-acs": "2.1.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

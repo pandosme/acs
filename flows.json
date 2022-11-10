@@ -20,6 +20,7 @@
         "type": "ui_tab",
         "name": "Home",
         "icon": "dashboard",
+        "order": 1,
         "disabled": false,
         "hidden": false
     },
@@ -165,7 +166,7 @@
         "type": "ui_tab",
         "name": "Add camera",
         "icon": "dashboard",
-        "order": 3,
+        "order": 2,
         "disabled": false,
         "hidden": false
     },
@@ -188,7 +189,7 @@
         "label": "Address",
         "tooltip": "",
         "group": "7a93279e481241ee",
-        "order": 0,
+        "order": 2,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -198,8 +199,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 420,
-        "y": 200,
+        "x": 760,
+        "y": 240,
         "wires": [
             [
                 "ce0db8f8104a099c"
@@ -214,7 +215,7 @@
         "label": "User",
         "tooltip": "",
         "group": "7a93279e481241ee",
-        "order": 0,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -224,7 +225,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 410,
+        "x": 750,
         "y": 280,
         "wires": [
             [
@@ -240,7 +241,7 @@
         "label": "Port",
         "tooltip": "",
         "group": "7a93279e481241ee",
-        "order": 0,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -250,8 +251,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 410,
-        "y": 240,
+        "x": 750,
+        "y": 360,
         "wires": [
             [
                 "b3570be34fd06f50"
@@ -266,7 +267,7 @@
         "label": "Password",
         "tooltip": "",
         "group": "7a93279e481241ee",
-        "order": 0,
+        "order": 4,
         "width": 0,
         "height": 0,
         "passthru": true,
@@ -276,7 +277,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 420,
+        "x": 760,
         "y": 320,
         "wires": [
             [
@@ -303,8 +304,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 200,
+        "x": 970,
+        "y": 240,
         "wires": [
             []
         ]
@@ -328,8 +329,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 240,
+        "x": 960,
+        "y": 360,
         "wires": [
             []
         ]
@@ -353,7 +354,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 960,
         "y": 280,
         "wires": [
             []
@@ -378,7 +379,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 640,
+        "x": 980,
         "y": 320,
         "wires": [
             []
@@ -388,7 +389,7 @@
         "id": "2e723bc75a0533f9",
         "type": "inject",
         "z": "605a8de4fdf4f15e",
-        "name": "",
+        "name": "On start",
         "props": [
             {
                 "p": "payload"
@@ -401,15 +402,15 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "2",
         "topic": "",
-        "payload": "55756",
+        "payload": "",
         "payloadType": "str",
-        "x": 150,
+        "x": 160,
         "y": 240,
         "wires": [
             [
-                "066f2b67ca9721b7"
+                "7b5a748622607e06"
             ]
         ]
     },
@@ -466,8 +467,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 830,
-        "y": 460,
+        "x": 790,
+        "y": 500,
         "wires": []
     },
     {
@@ -477,11 +478,10 @@
         "name": "",
         "server": "c1d3e4b3e0e7b4a2",
         "action": "Inventory",
-        "x": 580,
-        "y": 460,
+        "x": 540,
+        "y": 500,
         "wires": [
             [
-                "23ecf51e476e5c58",
                 "44f1e3d7e67fa27e",
                 "0119baf2cb2b6d8c"
             ]
@@ -528,55 +528,10 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 460,
+        "y": 500,
         "wires": [
             [
                 "c74162b10ca836c8"
-            ]
-        ]
-    },
-    {
-        "id": "23ecf51e476e5c58",
-        "type": "debug",
-        "z": "605a8de4fdf4f15e",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "6736ca267a434b4f",
-        "type": "inject",
-        "z": "605a8de4fdf4f15e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 460,
-        "wires": [
-            [
-                "d54cdb3efcaf27f3"
             ]
         ]
     },
@@ -591,7 +546,6 @@
         "y": 100,
         "wires": [
             [
-                "d25c1a0154d0c12c",
                 "1e5036ed07d5b099"
             ]
         ]
@@ -669,7 +623,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 140,
+        "x": 160,
         "y": 500,
         "wires": [
             [
@@ -678,26 +632,10 @@
         ]
     },
     {
-        "id": "d25c1a0154d0c12c",
-        "type": "debug",
-        "z": "605a8de4fdf4f15e",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "1e5036ed07d5b099",
         "type": "function",
         "z": "605a8de4fdf4f15e",
-        "name": "function 1",
+        "name": "Translate",
         "func": "if( msg.payload.statusCode === 401 ) {\n    msg.payload.statusMessage = \"Authentication failed\";\n    msg.payload.body = \"Wrong user or password\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -709,35 +647,6 @@
         "wires": [
             [
                 "00ec29c1e6e332df"
-            ]
-        ]
-    },
-    {
-        "id": "9e2b891053db6d3b",
-        "type": "inject",
-        "z": "605a8de4fdf4f15e",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "str",
-        "x": 150,
-        "y": 320,
-        "wires": [
-            [
-                "0e00a747b17d1116"
             ]
         ]
     },
@@ -767,8 +676,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
-        "y": 460,
+        "x": 820,
+        "y": 560,
         "wires": [
             [
                 "828363a6eb6c20aa"
@@ -790,9 +699,176 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1240,
-        "y": 460,
+        "x": 1030,
+        "y": 560,
         "wires": []
+    },
+    {
+        "id": "7b5a748622607e06",
+        "type": "ui_button",
+        "z": "605a8de4fdf4f15e",
+        "name": "",
+        "group": "7a93279e481241ee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "57833c0717678e63",
+                "6270c4012361d127",
+                "bc0a8644a34f21d6",
+                "0184b87d8077277d",
+                "d4f480312165b9b1"
+            ]
+        ]
+    },
+    {
+        "id": "57833c0717678e63",
+        "type": "change",
+        "z": "605a8de4fdf4f15e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 240,
+        "wires": [
+            [
+                "a4635be41b44405f"
+            ]
+        ]
+    },
+    {
+        "id": "6270c4012361d127",
+        "type": "change",
+        "z": "605a8de4fdf4f15e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "55756",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "066f2b67ca9721b7"
+            ]
+        ]
+    },
+    {
+        "id": "bc0a8644a34f21d6",
+        "type": "change",
+        "z": "605a8de4fdf4f15e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "8a5f7fdbb08cfce9"
+            ]
+        ]
+    },
+    {
+        "id": "0184b87d8077277d",
+        "type": "change",
+        "z": "605a8de4fdf4f15e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "0e00a747b17d1116"
+            ]
+        ]
+    },
+    {
+        "id": "d4f480312165b9b1",
+        "type": "change",
+        "z": "605a8de4fdf4f15e",
+        "name": "Reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "44f1e3d7e67fa27e"
+            ]
+        ]
     },
     {
         "id": "b420ee43.30b24",
@@ -931,7 +1007,7 @@
         "y": 160,
         "wires": [
             [
-                "5d3827e3cc9ab562"
+                "a07f497281694b79"
             ]
         ]
     },
@@ -942,7 +1018,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1190,
+        "x": 1290,
         "y": 160,
         "wires": []
     },
@@ -965,7 +1041,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 1080,
         "y": 160,
         "wires": [
             [
@@ -985,8 +1061,8 @@
         "columns": [],
         "outputs": 0,
         "cts": false,
-        "x": 1330,
-        "y": 300,
+        "x": 1350,
+        "y": 220,
         "wires": []
     },
     {
@@ -998,7 +1074,7 @@
             "381883593f1b801c"
         ],
         "uncaught": false,
-        "x": 1360,
+        "x": 1460,
         "y": 160,
         "wires": [
             [
@@ -1013,7 +1089,7 @@
         "name": "",
         "statusCode": "400",
         "headers": {},
-        "x": 1560,
+        "x": 1660,
         "y": 160,
         "wires": []
     },
@@ -1032,7 +1108,7 @@
         "strings": false,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 670,
+        "x": 830,
         "y": 160,
         "wires": [
             [
@@ -1052,7 +1128,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 850,
+        "x": 950,
         "y": 220,
         "wires": [
             [
@@ -1069,7 +1145,7 @@
             "1ee972dd8808e982"
         ],
         "uncaught": false,
-        "x": 1360,
+        "x": 1460,
         "y": 220,
         "wires": [
             [
@@ -1092,7 +1168,7 @@
         "className": "",
         "topic": "",
         "name": "",
-        "x": 1580,
+        "x": 1680,
         "y": 220,
         "wires": []
     },
@@ -1115,7 +1191,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
+        "x": 1160,
         "y": 220,
         "wires": [
             [
@@ -1153,7 +1229,7 @@
         "y": 300,
         "wires": [
             [
-                "18df77aa74975ec7"
+                "31f430365268d0ed"
             ]
         ]
     },
@@ -1163,7 +1239,7 @@
         "z": "a2360ba8f952f700",
         "name": "",
         "group": "44018e60.9fab3",
-        "order": 4,
+        "order": 5,
         "width": "6",
         "height": "1",
         "passthru": false,
@@ -1177,38 +1253,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 270,
-        "y": 460,
+        "x": 210,
+        "y": 540,
         "wires": [
             [
-                "77350c24dc4ea238"
-            ]
-        ]
-    },
-    {
-        "id": "77350c24dc4ea238",
-        "type": "change",
-        "z": "a2360ba8f952f700",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "devices",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 460,
-        "y": 460,
-        "wires": [
-            [
-                "3b9f0521ec77c8dd"
+                "e0dbc5c333c6ccd4"
             ]
         ]
     },
@@ -1219,11 +1268,11 @@
         "name": "",
         "server": "c1d3e4b3e0e7b4a2",
         "action": "Add camera",
-        "x": 1350,
-        "y": 460,
+        "x": 670,
+        "y": 660,
         "wires": [
             [
-                "0c7f64e0e4a6af73"
+                "f88161196d0630ee"
             ]
         ]
     },
@@ -1266,8 +1315,8 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 630,
-        "y": 460,
+        "x": 410,
+        "y": 600,
         "wires": [
             [
                 "4a93594c12ceeafe"
@@ -1314,8 +1363,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
-        "y": 460,
+        "x": 450,
+        "y": 660,
         "wires": [
             [
                 "b5a823aa5f69c52e"
@@ -1323,38 +1372,20 @@
         ]
     },
     {
-        "id": "0c7f64e0e4a6af73",
-        "type": "debug",
-        "z": "a2360ba8f952f700",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1620,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "4a93594c12ceeafe",
         "type": "function",
         "z": "a2360ba8f952f700",
         "name": "Camera to be added",
-        "func": "msg.payload = {\n    address: msg.payload.address,\n    name: msg.payload.name,\n    user: flow.get(\"cameraUser\"),\n    password: flow.get(\"cameraPassword\")\n}\nreturn msg;",
+        "func": "if( msg.payload.status === \"OK\")\n    return;\n\nmsg.payload = {\n    address: msg.payload.address,\n    name: msg.payload.name,\n    user: flow.get(\"cameraUser\"),\n    password: flow.get(\"cameraPassword\"),\n    port: flow.get(\"cameraPort\") || \"80\"\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
-        "y": 460,
+        "x": 640,
+        "y": 600,
         "wires": [
             [
-                "8844bfa7e4f324e9",
                 "b08994b7d1a03024"
             ]
         ]
@@ -1368,7 +1399,7 @@
         "tooltip": "",
         "group": "44018e60.9fab3",
         "order": 2,
-        "width": "6",
+        "width": "4",
         "height": "1",
         "passthru": true,
         "mode": "text",
@@ -1377,8 +1408,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 270,
-        "y": 380,
+        "x": 210,
+        "y": 400,
         "wires": [
             [
                 "d38060b9eb7eebde"
@@ -1394,7 +1425,7 @@
         "tooltip": "",
         "group": "44018e60.9fab3",
         "order": 3,
-        "width": "6",
+        "width": "4",
         "height": "1",
         "passthru": true,
         "mode": "password",
@@ -1403,8 +1434,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 290,
-        "y": 420,
+        "x": 230,
+        "y": 440,
         "wires": [
             [
                 "9ba7e50e99323930"
@@ -1430,8 +1461,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
-        "y": 380,
+        "x": 460,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1455,27 +1486,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
-        "y": 420,
+        "x": 480,
+        "y": 440,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "8844bfa7e4f324e9",
-        "type": "debug",
-        "z": "a2360ba8f952f700",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1110,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "1ddccd2ef059b7b3",
@@ -1486,29 +1501,275 @@
             "b5a823aa5f69c52e"
         ],
         "uncaught": false,
-        "x": 1350,
-        "y": 520,
+        "x": 670,
+        "y": 700,
         "wires": [
             [
-                "984da1be4c44017d"
+                "5e63befe4f5e2c04",
+                "2ce33eaca9935087"
             ]
         ]
     },
     {
-        "id": "984da1be4c44017d",
-        "type": "debug",
+        "id": "e0dbc5c333c6ccd4",
+        "type": "function",
         "z": "a2360ba8f952f700",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1620,
-        "y": 520,
+        "name": "Set Adding...",
+        "func": "msg.payload = flow.get(\"devices\") || [];\nmsg.payload.forEach( function(item){\n    if( item.status !== \"OK\")\n        item.status = \"Adding...\";\n});\n\nflow.set(\"devices\",msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "3b9f0521ec77c8dd",
+                "5532658536a15b78"
+            ]
+        ]
+    },
+    {
+        "id": "5e63befe4f5e2c04",
+        "type": "function",
+        "z": "a2360ba8f952f700",
+        "name": "Already added",
+        "func": "if( msg.payload.body.search(\"already added\") < 0 )\n    return;\n\nvar devices = flow.get(\"devices\");\ndevices.forEach(function(item){\n    if( item.address === msg.payload.address )\n        item.status = \"OK\";\n});\n\nflow.set(\"devices\",devices);\nmsg.payload = devices;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 700,
+        "wires": [
+            [
+                "63f977c43f300a27"
+            ]
+        ]
+    },
+    {
+        "id": "2ce33eaca9935087",
+        "type": "function",
+        "z": "a2360ba8f952f700",
+        "name": "Not added",
+        "func": "if( msg.payload.body.search(\"already added\") >= 0 )\n    return;\n\nvar devices = flow.get(\"devices\");\ndevices.forEach(function(item){\n    if( item.address === msg.payload.address )\n        item.status = msg.payload.body;\n});\n\nflow.set(\"devices\",devices);\nmsg.payload = devices;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 740,
+        "wires": [
+            [
+                "63f977c43f300a27"
+            ]
+        ]
+    },
+    {
+        "id": "235d31d8e45ec464",
+        "type": "link in",
+        "z": "a2360ba8f952f700",
+        "name": "link in 1",
+        "links": [
+            "abbd4180bc48ce98",
+            "5532658536a15b78",
+            "31f430365268d0ed",
+            "63f977c43f300a27"
+        ],
+        "x": 1015,
+        "y": 260,
+        "wires": [
+            [
+                "d3e7eb9b9971c626"
+            ]
+        ]
+    },
+    {
+        "id": "d3e7eb9b9971c626",
+        "type": "change",
+        "z": "a2360ba8f952f700",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 260,
+        "wires": [
+            [
+                "18df77aa74975ec7"
+            ]
+        ]
+    },
+    {
+        "id": "b70eb89e31db991f",
+        "type": "ui_dropdown",
+        "z": "a2360ba8f952f700",
+        "name": "",
+        "label": "Port",
+        "tooltip": "",
+        "place": "Select port",
+        "group": "44018e60.9fab3",
+        "order": 4,
+        "width": "5",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "80",
+                "value": "80",
+                "type": "str"
+            },
+            {
+                "label": "443 (HTTPS)",
+                "value": "443",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "e23c85900c30a815"
+            ]
+        ]
+    },
+    {
+        "id": "e23c85900c30a815",
+        "type": "change",
+        "z": "a2360ba8f952f700",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cameraPort",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5532658536a15b78",
+        "type": "link out",
+        "z": "a2360ba8f952f700",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "558313acf247e7bd",
+            "235d31d8e45ec464"
+        ],
+        "x": 645,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "31f430365268d0ed",
+        "type": "link out",
+        "z": "a2360ba8f952f700",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "235d31d8e45ec464"
+        ],
+        "x": 585,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "999d4b343b459ce2",
+        "type": "comment",
+        "z": "a2360ba8f952f700",
+        "name": "Update",
+        "info": "",
+        "x": 910,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a07f497281694b79",
+        "type": "delay",
+        "z": "a2360ba8f952f700",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "300",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 160,
+        "wires": [
+            [
+                "5d3827e3cc9ab562"
+            ]
+        ]
+    },
+    {
+        "id": "f88161196d0630ee",
+        "type": "function",
+        "z": "a2360ba8f952f700",
+        "name": "Update",
+        "func": "var devices = flow.get(\"devices\");\ndevices.forEach(function(item){\n    if( item.address === msg.payload.address )\n        item.status = \"OK\";\n});\n\nflow.set(\"devices\",devices);\nmsg.payload = devices;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 660,
+        "wires": [
+            [
+                "63f977c43f300a27"
+            ]
+        ]
+    },
+    {
+        "id": "63f977c43f300a27",
+        "type": "link out",
+        "z": "a2360ba8f952f700",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "235d31d8e45ec464"
+        ],
+        "x": 1035,
+        "y": 660,
         "wires": []
     }
 ]
